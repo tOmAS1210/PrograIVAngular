@@ -1,0 +1,27 @@
+<p>bindeos works!</p>
+
+<h1>Clase 01 - Bindeos</h1>
+
+<p>
+  {{nombre}}
+</p>
+<p>
+  {{numero}}
+</p>
+<p>
+  {{contador}}
+</p>
+
+<!--atributos-->
+<a [href]="link">Google</a>
+
+<div style="background-color: red; height: 100px;"></div>
+<div [style]="style"></div>
+
+<!--eventos-->
+<button (click)="contar()">Contar</button>
+
+<button (click)="borrar()">Borrar</button>
+
+<!-- doble-->
+<input [(ngModel)]="nombre"/>
