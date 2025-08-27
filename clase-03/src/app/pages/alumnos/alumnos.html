@@ -1,0 +1,17 @@
+
+<section class="container">
+    <h1>Alumnos</h1>
+    <hr>
+    <app-listado-alumnos [listadoHijo]="listado" (envioDeAlumno)="verDetalleFinal($event)">
+    </app-listado-alumnos>
+
+    <hr>
+
+    <app-agregar-alumnos (envioDeAlumno)="agregarArrayEnElPadre($event)">
+    </app-agregar-alumnos>
+
+    <hr>
+
+    <app-detalle-alumnos [alumno]="alumno">
+    </app-detalle-alumnos>
+</section>

@@ -1,0 +1,8 @@
+<p>detalle-alumnos works!</p>
+
+@if (alumno() !== null) {
+    <h1>Alumno Nombre: {{alumno()!.nombre}}</h1>
+    <h2>Legajo: {{alumno()!.legajo}}</h2>
+}@else {
+    <p>Nada que mostrar.</p>
+}

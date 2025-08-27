@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th>Legajo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (al of listadoHijo(); track al.legajo)
+        {
+        <tr>
+            <td>{{al.legajo}}</td>
+            <td>{{al.nombre}}</td>
+            <td>{{al.apellido}}</td>
+            <td><button class="btn btn-info" (click)="verDetalle(al)">Ver detalle</button></td>
+        </tr>
+        }   
+    </tbody>
+
+</table>
