@@ -1,0 +1,77 @@
+<section class="container">
+
+    <h1>Registro</h1>
+    <hr>
+
+    <!-- VERSION CON FORM GROUP -->
+    <form class="card" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+        <div class="card-body">
+            <div class="mb-1">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre"
+                formControlName="nombre">
+                @if (formulario.controls.nombre.errors !== null) {
+                    @if (formulario.controls.nombre.errors) {
+                        <small class="error">{{'El campo nombre es requerido'}}</small>
+                    }
+                }
+            </div>
+            <div class="mb-1">
+                <label for="apellido">apellido</label>
+                <input type="text" name="apellido" id="apellido"
+                formControlName="apellido">
+            </div>
+            <div class="mb-1">
+                <label for="correo">correo</label>
+                <input type="text" name="correo" id="correo"
+                formControlName="correo">
+            </div>
+            <div class="mb-1">
+                <label for="contrasenia">contrasenia</label>
+                <input type="text" name="contrasenia" id="contrasenia"
+                formControlName="contrasenia">
+            </div>
+
+            <div class="mb-1">
+                <label for="repetirContrasenia">repetir contrasenia</label>
+                <input type="text" name="repetirContrasenia" id="repetirContrasenia"
+                formControlName="repetirContrasenia">
+            </div>
+            <button class="btn btn-dark" type="submit" [disabled]="!this.formulario.valid">Enviar</button>
+        </div>
+    </form>
+
+</section>
+
+<!-- 
+    VERSION CON SOLO FORMS CONTROLS
+
+<form class="card">
+    <div class="card-body">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre", id="nombre" [formControl]="nombre">
+        </div>
+        <div>
+            <label for="apellido">apellido</label>
+            <input type="text" name="apellido", id="apellido" [formControl]="apellido">
+        </div>
+        <div>
+            <label for="correo">correo</label>
+            <input type="text" name="correo", id="correo" [formControl]="correo">
+        </div>
+        <div>
+            <label for="contrasenia">contrasenia</label>
+            <input type="text" name="contrasenia", id="contrasenia" [formControl]="contrasenia">
+        </div>
+
+        <div>
+            <label for="repetirContrasenia">repetir contrasenia</label>
+            <input type="text" name="repetirContrasenia", id="repetirContrasenia" [formControl]="repetirContrasenia">
+        </div>
+
+    </div>
+
+    
+
+</form> -->
